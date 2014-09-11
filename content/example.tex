@@ -1,0 +1,23 @@
+\section{Section description}
+\subsection{Subsection description}
+\subsubsection{Subsubsection description}
+I have some text that refers to a Table \ref{tb:pidSimulink} and that data correlates to a Figure \ref{fig:pidPhys1} 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{./graphics/pidPhys1.eps}
+\captionsetup{width=0.8\textwidth}
+\caption[Short figure example]{Larger figure example that explains more about the figure}
+\label{fig:pidPhys1}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\begin{tabu}{l|[1.25pt]c|c|c}
+& \(K_P\) & \(K_I\) & \(K_D\)\\\tabucline[1.25pt]{-}
+Tilt & 240 & 85 & -\\\hline%0,248960\\\hline
+Pan & 240 & 100 & -
+\end{tabu}
+\captionsetup{type=table}
+\caption[Regulatorkoefficienter]{Koefficienter fundet vha. simulering.}
+\label{tb:pidSimulink}
+\end{figure}
