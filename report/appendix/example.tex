@@ -1,0 +1,23 @@
+\section{DC motoren}
+\label{sec:dcmotor}
+Dette appendiks beskæftiger sig med den matematiske model af DC-motoren og bestemmelsen af motorparametrene.
+\subsection{DC Motor karakteristik}
+DC Motoren kan modelleres efter diagrammet på figur \ref{fig:DCmotor}.
+\begin{figure}[!th]
+\centering
+\begin{circuitikz}
+\input{graphics/figDCmotor.tex}
+\end{circuitikz}
+\caption[DC motor]{Diagram over fysiske komponenter i DC motoren.}
+\label{fig:DCmotor}
+\end{figure}
+Ligningen for \(V_m\) er givet ved ligning \ref{eq:Vm_transient0}.
+\begin{equation}
+V_m\left(t\right)=L_m \cdot \frac{\mathrm d}{\mathrm d t} \big( i_m\left(t\right) \big)+R_m \cdot i_m\left(t\right) + V_{EMF}\left(t\right)
+\label{eq:Vm_transient0}
+\end{equation}
+Den modelektromotoriske kraft, \(V_{EMF}\) er givet ved ligning \ref{eq:VEMF}.
+\begin{equation}
+V_{EMF}\left(t\right) = K_b \cdot \omega\left(t\right)
+\label{eq:VEMF}
+\end{equation}
