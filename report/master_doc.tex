@@ -14,8 +14,8 @@
 \pagenumbering{Roman}
 
 %%%%% Formalia should go here %%%%%%%
-\include{./formalia/abstract}
-\include{./formalia/tableofcontents}
+% \include{./formalia/abstract}
+% \include{./formalia/tableofcontents}
 
 \pagestyle{fancy}
 \fancyfoot{}
@@ -24,13 +24,21 @@
 \fancyfoot[LO,RE]{\thepage}
 
 %%%%% Content should go here %%%%%%%
-\include{./content/example}
+\section{Collaboration}
+\include{./content/Collaboration/Belbin}
+\include{./content/Collaboration/Swot}
+\include{./content/Collaboration/triangle} 
+\include{./content/Collaboration/conclusion}
+\section{Innovation and business}
+\input{./content/Innovation_and_business/pictures}
+\section{Expert skills}
+% \include{./content/Expert_skills}
 
 %%%%% Appendices should go here %%%%%%%
-\part{Appendices}
-\appendix
-\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}% Antal niveau af appendix i indholdsfortegnelsen.
-\captionsetup{list=no}%remove figures from appendix on list of content
-\input{./appendix/example}
-% \include{./appendix/}
+% \part{Appendices}
+% \appendix
+% \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}% Depth of appendix in table of content
+% \captionsetup{list=no}%remove figures from appendix on list of content
+% \input{./appendix/example} %first appendix should be input, rest should be include
+% % \include{./appendix/}
 \end{document} 

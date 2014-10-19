@@ -1,4 +1,5 @@
-\documentclass[11pt,twoside,a4paper,titlepage]{article}
+% \documentclass[11pt,twoside,a4paper,titlepage]{article}
+\documentclass[10pt,twoside,a4paper,titlepage]{article}
 %%%%%%% Standard settings %%%%%%%
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -11,9 +12,7 @@
 \usepackage{newclude}
 \usepackage{siunitx}
 \usepackage{booktabs}
-\usepackage{subfig}
 \usepackage{wrapfig}
-\usepackage[subfigure]{tocloft}
 %\usepackage{todonotes}
 \usepackage[disable]{todonotes}
 \usepackage{lastpage}
@@ -61,7 +60,13 @@
 \usepackage[americanvoltages, americancurrents, americanresistors, americaninductors, smartlabels]{circuitikz}
 \usepackage{graphicx} % used for MATLAB figures in the format .eps
 \usepackage{epstopdf} % Used for automatic convertion of .eps to pdf; Without this we cannot compile with pdfLaTeX.
+\usepackage{epsfig}
 \usepackage{mathtools}
+\usepackage{array}
+\usepackage{float}
+\usepackage{floatflt}
+ \usepackage{subcaption}
+
 \usetikzlibrary{arrows,automata} % For drawing state machines
 %%%%%%% captions settings %%%%%%%
 \usepackage[round]{natbib}
