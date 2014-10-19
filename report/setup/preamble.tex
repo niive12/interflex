@@ -111,10 +111,13 @@ unicode]{hyperref}
 \newenvironment{changemargin}[2]{%
 \begin{list}{}{%
 \setlength{\topsep}{0pt}%
-\setlength{\leftmargin}{#1}%
-\setlength{\rightmargin}{#2}%
+\setlength{\leftmargin}{#1}%setlength{\rightmargin}{#2}%
 \setlength{\listparindent}{\parindent}%
 \setlength{\itemindent}{\parindent}%
 \setlength{\parsep}{\parskip}%
 }%
 \item[]}{\end{list}}
+
+\usepackage{xcolor,colortbl}
+\newcommand{\mycheckmark}{\includegraphics[width=0.7cm]{./graphics/checkmark}}
+\definecolor{Green}{rgb}{0.04,0.45,0.11}
