@@ -1,21 +1,19 @@
-\documentclass[11pt,twoside,a4paper,titlepage]{article}
+% \documentclass[11pt,twoside,a4paper,titlepage]{article}
+\documentclass[10pt,twoside,a4paper,titlepage]{article}
 %%%%%%% Standard settings %%%%%%%
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[nottoc, numbib, notlot, notlof]{tocbibind}
 \usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
-\usepackage{mathtools}
 \usepackage{microtype}
 \usepackage[svgnames]{xcolor}
 \usepackage{newclude}
 \usepackage{siunitx}
 \usepackage{booktabs}
-\usepackage{subfig}
 \usepackage{wrapfig}
-\usepackage[subfigure]{tocloft}
-%\usepackage{todonotes}
-\usepackage[disable]{todonotes}
+\usepackage{todonotes}
+% \usepackage[disable]{todonotes}
 \usepackage{lastpage}
 \usepackage{lipsum,lastpage}
 \usepackage{hanging}
@@ -35,7 +33,7 @@
 % % Two paged margin:
 % \usepackage[margin=2.5cm, inner =3cm,outer =2cm]{geometry}
 % % One paged magin:
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[margin=1.5cm]{geometry}
 \usepackage{paralist}
 \let\itemize\compactitem
 \let\enditemize\endcompactitem
@@ -61,7 +59,14 @@
 \usepackage[americanvoltages, americancurrents, americanresistors, americaninductors, smartlabels]{circuitikz}
 \usepackage{graphicx} % used for MATLAB figures in the format .eps
 \usepackage{epstopdf} % Used for automatic convertion of .eps to pdf; Without this we cannot compile with pdfLaTeX.
-\usepackage{mathtools}
+\usepackage{epsfig}
+\usepackage{array}
+\usepackage{float}
+\usepackage{floatflt}
+\usepackage{subcaption}
+
+\usepackage{pdflscape} %% to make landscape. The same as lscape but rotated for viewing the side normally in a pd
+
 \usetikzlibrary{arrows,automata} % For drawing state machines
 %%%%%%% captions settings %%%%%%%
 \usepackage[round]{natbib}
@@ -108,10 +113,13 @@ unicode]{hyperref}
 \newenvironment{changemargin}[2]{%
 \begin{list}{}{%
 \setlength{\topsep}{0pt}%
-\setlength{\leftmargin}{#1}%
-\setlength{\rightmargin}{#2}%
+\setlength{\leftmargin}{#1}%setlength{\rightmargin}{#2}%
 \setlength{\listparindent}{\parindent}%
 \setlength{\itemindent}{\parindent}%
 \setlength{\parsep}{\parskip}%
 }%
 \item[]}{\end{list}}
+
+\usepackage{xcolor,colortbl}
+\newcommand{\mycheckmark}{\includegraphics[width=0.7cm]{./graphics/checkmark}}
+\definecolor{Green}{rgb}{0.04,0.45,0.11}
