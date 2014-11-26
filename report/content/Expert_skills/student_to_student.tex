@@ -1,0 +1,82 @@
+\section{student to student teaching}
+\subsection{Nikolaj}
+I am studying robotic systems and as part of my education I had a course on classical control theory.
+
+Control theory works with creating models and controllers for linear systems.
+\subsubsection{Session topics}
+The quick intro touched on what control diagrams looked like and how open loop and closed loop systems behave on an intuitive level.
+
+To show an example of where transfer functions exist in the real world, the transfer function for a motor was calculated.
+We talked about the different ways to represent a transfer function.
+Stability was defined and examples of unstable systems was given.
+We talked about how to read a pole zero transfer function and what pole positions meant for stability and how it affects the system in the time domain.
+We talked about overshoot, damping and settling time.
+We talked about what second order systems look like in the time domain.
+Then an example was calculated to show how you would design a controller given requirements to it's performance in the time domain.
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}[c]{0.4\textwidth}
+\centering
+  \begin{tikzpicture}[node distance = 2 cm]
+  \input{graphics/control_loop}
+  \end{tikzpicture}
+  \caption{closed loop system}
+\end{subfigure}
+\begin{subfigure}[c]{0.4\textwidth}
+\centering
+  \begin{tikzpicture}
+    \draw
+      (0,-1) -- (0,1) node[above] {\(j\omega\)}
+      (-4,0) -- (1,0) node[right] {\(\sigma\)}
+    ;
+
+    \node[pole] at (-1,0) {};
+    \node[pole] at (-2,0) {} ;
+    \node[pole] at (-3,0) {} ;
+    
+    \draw[dashed,->] (-2,0) -- (0,3.46);
+    \draw[dashed,->] (-2,0) -- (0,-3.46);
+    \draw (-1.5,0) arc(0:60:0.5);
+    
+    \draw[very thick] (-2,0) -- (-1.5,0) to[out=90, in=240] (-1,1.73) -- (0,3.46);
+    \draw[very thick] (-1,0) -- (-1.5,0) to[out=-90, in=-240] (-1,-1.73) -- (0,-3.46);
+    \draw[very thick,->] (-3,0) -- (-3.9,0);
+  \end{tikzpicture}
+  \caption{Root Locus}
+\end{subfigure}
+\caption{Topics introduced in ``student to student'' teaching about control theory}
+\end{figure}
+
+Root Locus was defined and it was shown how to read a Root Locus plot and how to draw it by hand. 
+We talked about PID controllers and what the parameters meant. 
+We talked about systems that uses PID in the real world.
+We talked about ways to chose parameters for PID using the Zigler Nichols method.
+
+\subsubsection{Evaluation}
+A lot of topics were chosen and it was impossible to get explore a single topic withe the given time constraints.
+
+This made it possible to give an overview so people with little to no prior knowledge of control theory could visualize what is possible and how to design a controller.
+
+The used math was not explained in this session as all the students knew about this already.
+
+This was well received and people seemed to follow the conclusions without going into detail about Laplas transforms and second order systems.
+
+The illustrations used was either examples from the book \todo[inline]{name and number} or drawn myself.
+
+There were a lot of questions during the presentation which shows that they were interested in the subject
+
+The response to the session was that it was a bit more technical than they expected. 
+But the pace was fine and it was easy to follow. 
+
+
+
+
+
+a. Topics of your session. 
+b. Evaluation of the session in general, the teaching materials, the relevance of the topics and planning and conduction of the session. 
+c. The material used in the session might be enclosed in Appendix. 
+
+Documentation and feedback on/evaluation of your lessons from your team
+members must be included in the project report by each subgroup of
+students. 

@@ -1,0 +1,18 @@
+\node [input, name=input] {};
+\node [sum,right of= input](sum) {};
+\node [block, right of=sum] (K) {\(K\)};
+\node [block, right of=K] (sys) {\(G(s)\)};
+\node [output, right of= sys] (output){};
+
+\draw[->] (input) -- node[pos=0.9, above] {+} (sum);
+\draw[->] (sum) -- (K);
+\draw[->] (K) -- (sys);
+\draw[->] (sys) -- node[name=feedback] {} (output);
+
+\node at (0,2) {} ;
+\node at (0,-2) {} ;
+
+\node[yshift=0.25cm] at (input) {in};
+\node[yshift=0.25cm] at (output) {out};
+\draw[->] (feedback.center) |- ++(-2.5,-1.5) node[block, name=H] {H};
+\draw[->] (H) -| node[pos=0.9, left] {-} (sum);
