@@ -70,15 +70,52 @@ The AddOn will come with a sort of tablet for the end users to use. The tablet w
 This enables the end user to modify the welding process in a few steps. Importance of user friendliness is immense, since the time spent on modifying the process has to be compared to the time the user could spend somewhere else.
 
 \section{Specific requirements}
-Requirements are the fundamentals of specifying the distinct tasks to solve for a project. 
+Requirements are the fundamentals of specifying the distinct tasks to solve when creating a software system. Requirements can be divided into categories, which is done below:
+
+\textbf{Functional Requirements:}
+\begin{itemize}
+
+\item The system should be able to communicate with the specified hardware
+\item The system should be able to communicate with any welding robot, future partners suggest
+\item The system should be able to take pictures with the embedded camera 
+\item The system should be able to detect a line within the workspace of each picture provided by the embedded camera, by using OpenCV
+\item The system should be able to create three dimensional coordinates based on inputs from a range scanner and a camera
+\item The system should be able to convert movement-coordinates for the specific robot
+
+\end{itemize}
+
+\textbf{Non-functional Requirements:}
+
+\begin{itemize}
+
+\item The system should be able to create a moveable path for the robot within a tenth part of the time it takes to pickup the coordinates.
+\item The precision of the laser should be within 0.05 cm
+\item The precision of the robot movement should be within 0.05 cm of the coordinates
+
+\end{itemize}
 
 \subsection{Functions}
+
+The system can be divided into three major functions, which handles the processing of detecting the place to weld, associate x,y an z coordinates and converts them into the movement program of a robot.
+
+These actions can be divided into the following functions:
+
+\begin{itemize}
+
+\item DetectLine
+\item Associate
+\item ConvertToMovement
+
+\end{itemize}
+
+
 
 \subsection{Non-functional Requirements}
 
 \subsection{Dependencies}
 
 \subsection{Database}
+A database to log every entry is favourable for the end customer, but it is not a part of the AddOn and therefore not a part of the development process.
 
 \subsection{System attributes}
 
