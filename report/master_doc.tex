@@ -17,7 +17,7 @@
 
 %%%%% Formalia should go here %%%%%%%
 % \include{./formalia/abstract}
-% \include{./formalia/tableofcontents}
+\include{./formalia/tableofcontents}
 
 \pagestyle{fancy}
 \fancyfoot{}
@@ -39,7 +39,6 @@
 
 \include{./content/Innovation_and_business/brainstorm}
 \include{./content/Innovation_and_business/osterwalder}
-\include{./content/Innovation_and_business/customer_and_market}
 
 \include{./content/Expert_skills/student_to_student}
 
@@ -52,11 +51,13 @@
 \input{./content/Businessplan/industry}
 \input{./content/Businessplan/management}
 \input{./content/Businessplan/budget}
+\input{./content/Businessplan/customer_and_market}
 %%%%% Appendices should go here %%%%%%%
-% \part{Appendices}
-% \appendix
-% \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}% Depth of appendix in table of content
-% \captionsetup{list=no}%remove figures from appendix on list of content
-% \input{./appendix/example} %first appendix should be input, rest should be include
+\part{Appendices}
+\appendix
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}% Depth of appendix in table of content
+\captionsetup{list=no}%remove figures from appendix on list of content
+\section{Student to Student}
+\input{content/Appendix/Nikolaj_student_teaching} %first appendix should be input, rest should be include
 % % \include{./appendix/}
 \end{document} 
