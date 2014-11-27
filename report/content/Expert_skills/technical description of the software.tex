@@ -108,16 +108,33 @@ These actions can be divided into the following functions:
 
 \end{itemize}
 
+\textbf{DetectLine:}
+By benefiting from the OpenCV library, this function is to detect the workspace area, by detecting the color marked by a worker, then detecting the line within.   
 
+\textbf{Associate:}
+This class has the task of gathering the two different data (camera coordinations and laser depth coordinations).
 
-\subsection{Non-functional Requirements}
+\textbf{ConvertToMovement:}
+The final coordinates generated from the Associate class is being converted to an input which a robot can use. 
 
 \subsection{Dependencies}
+Using libraries can create dependencies within the system, mainly when a used library is dependant on other libraries. In this project, the OpenCV library will be in focus when extracting data of the line that the robot has to weld.   
 
 \subsection{Database}
 A database to log every entry is favourable for the end customer, but it is not a part of the AddOn and therefore not a part of the development process.
 
 \subsection{System attributes}
+System attributes describes the qualities of a system in short terms. Primary qualities of the system is going to be:
+
+\begin{itemize}
+
+\item Reliability
+\item Precision
+\item Maintainability
+\item Adaptability
+
+These attributes describes a system which is able to adapt to the customers robots, while being reliable and precise. 
+\end{itemize}
 
 \section{Design decisions}
 
