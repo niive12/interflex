@@ -87,3 +87,8 @@ sympy-plots-for-*.tex/
 *.tdo
 # xindy
 *.xdy
+*.pdf
+report/master_doc.pdf
+management/Guid_summary.tex
+management/Waste_information.tex
+report/master_doc.pdf
