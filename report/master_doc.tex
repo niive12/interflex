@@ -1,6 +1,8 @@
 \input{./setup/preamble}
+\input{./setup/controller_diagram_styles}
+
 %lstlistings distance to text
-\lstset{aboveskip=0pt,belowskip=-10pt} %is this too agressive?
+\lstset{aboveskip=0pt,belowskip=-11pt} %is this too agressive?
 \begin{document}
 % Disable indentation
 \setlength{\parindent}{0pt}
@@ -15,7 +17,7 @@
 
 %%%%% Formalia should go here %%%%%%%
 % \include{./formalia/abstract}
-% \include{./formalia/tableofcontents}
+\include{./formalia/tableofcontents}
 
 \pagestyle{fancy}
 \fancyfoot{}
@@ -37,20 +39,34 @@
 
 \include{./content/Innovation_and_business/brainstorm}
 \include{./content/Innovation_and_business/osterwalder}
-\include{./content/Innovation_and_business/customer_and_market}
+
+\include{./content/Expert_skills/student_to_student}
 
 \clearpage
 \section{Expert skills}
 \input{./content/Expert_skills/technology_description}
 \clearpage
 \section{Business plan}
-\include{./content/Businessplan/industry}
-\include{./content/Businessplan/Action_and_development_plan}
+% \input{./content/Businessplan/idea_and_background} % still missing
+\todo[inline, color=red!50]{Idea and background section is missing}
+\input{./content/Businessplan/ProductAndConcept}
+\input{./content/Businessplan/customer_and_market}
+\input{./content/Businessplan/industry}
+% \input{./content/Businessplan/Sales_and_marketing} % still missing
+\todo[inline, color=red!50]{Sales and marketing section is missing}
+\input{./content/Businessplan/management}
+\input{./content/Businessplan/Action_and_development_plan} % still missing
+\todo[inline, color=red!50]{Action and development plan section is missing}
+% \input{./content/Businessplan/Risk_analysis} % still missing
+\todo[inline, color=red!50]{Risk analysis section is missing}
+\part{Appendices}
+\appendix
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}% Depth of appendix in table of content
+\captionsetup{list=no}%remove figures from appendix on list of content
 %%%%% Appendices should go here %%%%%%%
-% \part{Appendices}
-% \appendix
-% \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}% Depth of appendix in table of content
-% \captionsetup{list=no}%remove figures from appendix on list of content
-% \input{./appendix/example} %first appendix should be input, rest should be include
-% % \include{./appendix/}
+\input{./content/Businessplan/budget}
+\clearpage
+\section{Student to Student}
+\input{content/Appendix/Nikolaj_student_teaching} %first appendix should be input, rest should be include
+% \include{./content/Appendix/}
 \end{document} 
