@@ -16,14 +16,20 @@
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 \setlength{\parindent}{0pt}
 
-\begin{document}
 
 \section{Introduction}
 Software is one of the essentials of the product, it is also one of the challenges for the business to exist. Since a business plan describes the fundamentals of the company and how it is going to make money, it is a critical section to describe the product, which will be done during this section. When there is a need of developing a software, the usual way would be to collect requirements from stakeholders. Currently the group is the only known stakeholder and therefore it is hard to create the usual procedure for the development. This would be a acquiring of requirements, create use cases, design a class diagram and keep it developed during the process. 
 
 The development process is one of the key activities during the start up of the company. Therefore it is important to have focus of this specific process and making the choice of the right process. When in need of rapid development activities within the Scrum process would be attractive for the group, because it would implement the daily meeting which is used for sharing of problems and ideas for solving them. This requires an expert knowledge to become a useful process, which the group is eligible of.
-
+\clearpage
 \subsection{Current structure of the software system}
+Figure \ref{ClassDiagram} shows the current state architecture of the software system. The system is far from complete and will grow during the development process. The modifications are hard to predict at this very moment, but this displays the main functions of the system and what focus areas there are within the development. 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{graphics/ClassDiagram}
+\caption{A simple class diagram for the prototype software system}
+\label{ClassDiagram}
+\end{figure}
 
 
 \section{Product description}
@@ -137,7 +143,20 @@ These attributes describes a system which is able to adapt to the customers robo
 \end{itemize}
 
 \section{Design decisions}
+Basically the system is set to follow the 3 layer structure. But as the system evolves it can be hard to predict whether this is going to chance or not. 
+
+A factor which is common in the industrial is the request for real time actions within a network. This is not direct request, since a worker handles the robot and leaves it for its time to work. This mean that no special BUS networks are needed within the system and that a TCP protocol Ethernet network is a viable option. 
 
 \section{Life cycle}
 
-\end{document}
+When the product has been developed and released it is far from complete, this is the reason for maintenance and repeating the working process of optimization and development. If the product is not updated, competitors and new ideas on the market is going to kill the business. Therefore it is important to repeat the actions described in the life cycle below:
+\clearpage
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{graphics/Software_Development_Life_Cycle}
+\caption{The life cycle describes the process of establishing and maintaining a system}
+\label{SDLC}
+\end{figure}
+This process is not very detailed, because it is up to the developers and manage to choose a specific development process or a combination of them.
+
