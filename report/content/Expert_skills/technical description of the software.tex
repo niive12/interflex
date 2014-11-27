@@ -70,17 +70,71 @@ The AddOn will come with a sort of tablet for the end users to use. The tablet w
 This enables the end user to modify the welding process in a few steps. Importance of user friendliness is immense, since the time spent on modifying the process has to be compared to the time the user could spend somewhere else.
 
 \section{Specific requirements}
-Requirements are the fundamentals of specifying the distinct tasks to solve for a project. 
+Requirements are the fundamentals of specifying the distinct tasks to solve when creating a software system. Requirements can be divided into categories, which is done below:
+
+\textbf{Functional Requirements:}
+\begin{itemize}
+
+\item The system should be able to communicate with the specified hardware
+\item The system should be able to communicate with any welding robot, future partners suggest
+\item The system should be able to take pictures with the embedded camera 
+\item The system should be able to detect a line within the workspace of each picture provided by the embedded camera, by using OpenCV
+\item The system should be able to create three dimensional coordinates based on inputs from a range scanner and a camera
+\item The system should be able to convert movement-coordinates for the specific robot
+
+\end{itemize}
+
+\textbf{Non-functional Requirements:}
+
+\begin{itemize}
+
+\item The system should be able to create a moveable path for the robot within a tenth part of the time it takes to pickup the coordinates.
+\item The precision of the laser should be within 0.05 cm
+\item The precision of the robot movement should be within 0.05 cm of the coordinates
+
+\end{itemize}
 
 \subsection{Functions}
 
-\subsection{Non-functional Requirements}
+The system can be divided into three major functions, which handles the processing of detecting the place to weld, associate x,y an z coordinates and converts them into the movement program of a robot.
+
+These actions can be divided into the following functions:
+
+\begin{itemize}
+
+\item DetectLine
+\item Associate
+\item ConvertToMovement
+
+\end{itemize}
+
+\textbf{DetectLine:}
+By benefiting from the OpenCV library, this function is to detect the workspace area, by detecting the color marked by a worker, then detecting the line within.   
+
+\textbf{Associate:}
+This class has the task of gathering the two different data (camera coordinations and laser depth coordinations).
+
+\textbf{ConvertToMovement:}
+The final coordinates generated from the Associate class is being converted to an input which a robot can use. 
 
 \subsection{Dependencies}
+Using libraries can create dependencies within the system, mainly when a used library is dependant on other libraries. In this project, the OpenCV library will be in focus when extracting data of the line that the robot has to weld.   
 
 \subsection{Database}
+A database to log every entry is favourable for the end customer, but it is not a part of the AddOn and therefore not a part of the development process.
 
 \subsection{System attributes}
+System attributes describes the qualities of a system in short terms. Primary qualities of the system is going to be:
+
+\begin{itemize}
+
+\item Reliability
+\item Precision
+\item Maintainability
+\item Adaptability
+
+These attributes describes a system which is able to adapt to the customers robots, while being reliable and precise. 
+\end{itemize}
 
 \section{Design decisions}
 
