@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{picture}
+\usepackage{fullpage}
+\usepackage{dcolumn}
+
+\author{Thomas Søndergaard Christensen}
+\title{---}
+\date{dd/mm/yyyy}
+
+\begin{document}
+\section{Appendix: Pricing of Tool}
+\subsection{Introduction [better name needed]}
+For the success of this product it is crucial that the price stays competitive. Offline programming methods currently in use today\footnote{Information courtesy of Valk Welding} costs 100.000DKK for the software and required training. Our product should stay within this budget or offer significant advantages over competition.
+\subsection{Bill of Materials}
+In figure \ref{tab:BoM} is a rough estimate of the budget for each component needed to produce the robot. All of the prices are based on average costs of typical industrial range products in each category.  
+\begin{figure}[h!]
+\label{tab:BoM}
+	\begin{center}
+		\begin{tabular}{l c r}
+		Product            & & Budget (DKK)\\
+		\hline
+		Camera 				& : & 5.000  \\
+		Laser scanner		& : & 5.000 \\
+		Custom Housing		& : & 5.000\\
+		Embedded Hardware	& : & 2.000\\
+		Software/Firmware	& : & 5.000\\
+		UV flash			& : & 2.000\\
+		Interface			& : & 3.000\\
+		Marker				& : & 500\\[0.2cm]
+		\hline
+		Total				& : & 28.500\\ 
+		\end{tabular}
+	\end{center}
+	\caption{Estimated bill of materials}
+\end{figure}
+Some of the components mentioned in figure \ref{tab:BoM} require some elaboration:
+\paragraph{Custom Housing:}~\\
+As previously mentioned most of the components used to manufacture this product already exist, making the manufacturing of the product mostly an assembly. However, a custom housing to hold the components as well as protect them from the potentially harsh conditions of a welding environment must be made. A design will be made inhouse and a machine shop [Real name?] will be hired to manufacture the housing.
+\paragraph{Embedded Hardware:}~\\
+In order to provide the robot with the necessary information to perform a quality weld, it is necessary to include some hardware for managing the image processing as well as a range of other tasks. There are many off-the-shelf [off/of?] solutions on the market today, one of which is expected to meet the processing-needs of our application. If this is not the case or if it is economically advantagous, a custom processing board will be developed, in either case the assumed maximum budget is unaltered.
+\paragraph{Software/Firmware:}~\\
+In order to realise this product a multitude of different programming tasks must be completed, naturally, the development costs must be included in the final price of the product.
+\end{document}
