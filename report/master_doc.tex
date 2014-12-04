@@ -29,11 +29,12 @@
 % \simon   {simon   }
 
 %%%%% Formalia should go here %%%%%%%
+
 % \include{./formalia/abstract}
 \include{./formalia/tableofcontents}
 
 \pagestyle{fancy}
-\fancyfoot{}
+\fancyfoot{}of December at 12:15-13:00
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \fancyfoot[LO,RE]{\thepage}
@@ -81,7 +82,9 @@
 %%%%% Appendices should go here %%%%%%%
 \input{./content/Businessplan/PriceofProduct}
 \clearpage
-\section{Student to Student}
+\section{Student-to-Student Teaching}
 \input{content/Appendix/Nikolaj_student_teaching} %first appendix should be input, rest should be include
+\newpage
+\input{content/Appendix/Thomas_student_teaching}
 % \include{./content/Appendix/}
 \end{document} 
