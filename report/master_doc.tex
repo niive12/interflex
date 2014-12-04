@@ -15,20 +15,22 @@
 \fancyfoot[CO,CE]{\thepage}
 \pagenumbering{Roman}
 
-%%%%% Formalia should go here %%%%%%%
+%%%%% Formalia should go here %%%%%%%of December at 12:15-13:00
 % \include{./formalia/abstract}
 \include{./formalia/tableofcontents}
 
 \pagestyle{fancy}
-\fancyfoot{}
+\fancyfoot{}of December at 12:15-13:00
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \fancyfoot[LO,RE]{\thepage}
 
 %%%%% Content should go here %%%%%%%
 \section{Collaboration}
+
 \input{./content/Collaboration/CollaborationIntroduction}
 \input{./content/Collaboration/GroupContractReflections}
+
 \input{./content/Collaboration/triangle} 
 \input{./content/Collaboration/Belbin}
 \input{./content/Collaboration/Swot}
@@ -62,14 +64,17 @@
 \input{./content/Businessplan/RiskAnalysis} % still missing
 \todo[inline, color=red!50]{Risk analysis section is missing}
 \input{./content/Businessplan/budget}
+
 \part{Appendices}
 \appendix
 \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}% Depth of appendix in table of content
 \captionsetup{list=no}%remove figures from appendix on list of content
 %%%%% Appendices should go here %%%%%%%
-
+\input{./content/Businessplan/PriceofProduct}
 \clearpage
-\section{Student to Student}
+\section{Student-to-Student Teaching}
 \input{content/Appendix/Nikolaj_student_teaching} %first appendix should be input, rest should be include
+\newpage
+\input{content/Appendix/Thomas_student_teaching}
 % \include{./content/Appendix/}
 \end{document} 
