@@ -7,26 +7,11 @@
 \setlength{\parskip}{0.7\baselineskip}%
 \pagenumbering{gobble}
 \thispagestyle{empty}
-%\include{./formalia/frontpage}
+\include{./formalia/frontpage}
 \clearpage
 \fancyfoot{}
 \fancyfoot[CO,CE]{\thepage}
 \pagenumbering{Roman}
-
-% \section{Important information to everyone}
-% I have noticed an inconsistent use of todo notes.
-% To adjust for this I have made a shortcut for everyone so we can see who wrote it and it uses the same syntax.
-% Just write
-% \begin{verbatim}
-% \name{note}          
-% \end{verbatim} and the title of the section will be put in and a color will be chosen for each person.
-% \nikolaj {nikolaj }
-% \thomas  {thomas  }
-% \david   {david   }
-% \xabier  {xabier  }
-% \kirstine{kirstine}
-% \casper  {casper  }
-% \simon   {simon   }
 
 %%%%% Formalia should go here %%%%%%%
 
@@ -34,37 +19,18 @@
 \include{./formalia/tableofcontents}
 
 \pagestyle{fancy}
-\fancyfoot{}of December at 12:15-13:00
+\fancyfoot{}
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \fancyfoot[LO,RE]{\thepage}
 
 %%%%% Content should go here %%%%%%%
-\section{Collaboration}
-
-\input{./content/Collaboration/CollaborationIntroduction}
-\input{./content/Collaboration/GroupContractReflections}
-
-\input{./content/Collaboration/triangle} 
-\input{./content/Collaboration/Belbin}
-\input{./content/Collaboration/Swot}
-\input{./content/Collaboration/GPITGAIT}
-\input{./content/Collaboration/conclusion}
-\clearpage
-\section{Innovation and business}
-\input{./content/Innovation_and_business/pictures}
-\input{./content/Innovation_and_business/business_model}
-
-\include{./content/Innovation_and_business/brainstorm}
-\include{./content/Innovation_and_business/osterwalder}
-
-\clearpage
-\section{Expert skills}
+\section{Product Sescription}
 \input{./content/Expert_skills/sensor}
 \input{./content/Expert_skills/software}
 \clearpage
-\section{Business plan}
-% \input{./content/Businessplan/idea_and_background} % still missing
+
+\section{Business Plan}
 \input{./content/Businessplan/idea_and_background}
 \input{./content/Businessplan/ProductAndConcept}
 \input{./content/Businessplan/customer_and_market}
@@ -77,6 +43,24 @@
 \todo[inline, color=red!50]{Risk analysis section is missing}
 \input{./content/Businessplan/budget}
 
+\section{Collaboration}
+
+\input{./content/Collaboration/CollaborationIntroduction}
+\input{./content/Collaboration/GroupContractReflections}
+
+\input{./content/Collaboration/triangle} 
+\input{./content/Collaboration/Belbin}
+\input{./content/Collaboration/Swot}
+\input{./content/Collaboration/GPITGAIT}
+\input{./content/Collaboration/conclusion}
+\clearpage
+\section{Innovation and Business}
+\input{./content/Innovation_and_business/pictures}
+
+\include{./content/Innovation_and_business/brainstorm}
+\include{./content/Innovation_and_business/osterwalder}
+
+\clearpage
 \include{./content/Appendix/references}
 \part{Appendices}
 \appendix
