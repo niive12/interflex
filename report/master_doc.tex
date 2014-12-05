@@ -7,26 +7,11 @@
 \setlength{\parskip}{0.7\baselineskip}%
 \pagenumbering{gobble}
 \thispagestyle{empty}
-%\include{./formalia/frontpage}
+\include{./formalia/frontpage}
 \clearpage
 \fancyfoot{}
 \fancyfoot[CO,CE]{\thepage}
 \pagenumbering{Roman}
-
-% \section{Important information to everyone}
-% I have noticed an inconsistent use of todo notes.
-% To adjust for this I have made a shortcut for everyone so we can see who wrote it and it uses the same syntax.
-% Just write
-% \begin{verbatim}
-% \name{note}          
-% \end{verbatim} and the title of the section will be put in and a color will be chosen for each person.
-% \nikolaj {nikolaj }
-% \thomas  {thomas  }
-% \david   {david   }
-% \xabier  {xabier  }
-% \kirstine{kirstine}
-% \casper  {casper  }
-% \simon   {simon   }
 
 %%%%% Formalia should go here %%%%%%%
 
@@ -34,12 +19,30 @@
 \include{./formalia/tableofcontents}
 
 \pagestyle{fancy}
-\fancyfoot{}of December at 12:15-13:00
+\fancyfoot{}
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \fancyfoot[LO,RE]{\thepage}
 
 %%%%% Content should go here %%%%%%%
+\section{Product description}
+\input{./content/Expert_skills/sensor}
+\input{./content/Expert_skills/software}
+\clearpage
+
+\section{Business plan}
+\input{./content/Businessplan/idea_and_background}
+\input{./content/Businessplan/ProductAndConcept}
+\input{./content/Businessplan/customer_and_market}
+\input{./content/Businessplan/industry}
+\input{./content/Businessplan/Sales_and_marketing}
+\input{./content/Businessplan/management}
+\input{./content/Businessplan/Action_and_development_plan} 
+\todo[inline, color=red!50]{Action and development plan section is incomplete}
+\input{./content/Businessplan/RiskAnalysis} % still missing
+\todo[inline, color=red!50]{Risk analysis section is missing}
+\input{./content/Businessplan/budget}
+
 \section{Collaboration}
 
 \input{./content/Collaboration/CollaborationIntroduction}
@@ -58,24 +61,6 @@
 \include{./content/Innovation_and_business/osterwalder}
 
 \clearpage
-\section{Expert skills}
-\input{./content/Expert_skills/sensor}
-\input{./content/Expert_skills/software}
-\clearpage
-\section{Business plan}
-% \input{./content/Businessplan/idea_and_background} % still missing
-\input{./content/Businessplan/idea_and_background}
-\input{./content/Businessplan/ProductAndConcept}
-\input{./content/Businessplan/customer_and_market}
-\input{./content/Businessplan/industry}
-\input{./content/Businessplan/Sales_and_marketing}
-\input{./content/Businessplan/management}
-\input{./content/Businessplan/Action_and_development_plan} 
-\todo[inline, color=red!50]{Action and development plan section is incomplete}
-\input{./content/Businessplan/RiskAnalysis} % still missing
-\todo[inline, color=red!50]{Risk analysis section is missing}
-\input{./content/Businessplan/budget}
-
 \include{./content/Appendix/references}
 \part{Appendices}
 \appendix
