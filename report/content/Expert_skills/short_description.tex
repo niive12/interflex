@@ -1,0 +1,18 @@
+The product we want to create is an intelligent sensor.
+This sensor will allow for a new kind of programming that aims to be more intuitive and faster than current methods.
+We propose a tool which can be attached to and interface with an existing welding robot. 
+By using a special pen to mark the places an object should be welded this sensor can follow the markings to program the robot automatically.
+We want to combine the use of computer vision and lasers to determine the localization of the object and the welds.
+We want to let the workers change settings via a touch interface so the robot knows how to handle the markings. 
+
+The detection requires a two part localization. 
+From a perspective position or sets of positions the sensor will be able to see all markings.
+The robot should be able to determine where the markings is on the object. 
+This is what we refer to as global localization.
+To do this we use a camera and computer vision to locate and move the robot closer to the markings.
+The sensor will pick the first marking it can find and move closer towards that. 
+When a marking is found we need to locate the gab between two objects. 
+When a gab exist within a marked area that is treated as a place that should be welded.
+By using lasers we can determine where there is a gab as well as determine the angles between the objects.
+We call this part local localization.
+When a weld is completed the robot will return to the perspective position to find the next marking until there is no more markings left.

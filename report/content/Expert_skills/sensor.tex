@@ -1,33 +1,82 @@
 \subsection{Hardware Implementation}
-\subsubsection{Introduction}
-In this section the practical implementation of the welding tool proposed in this report will be described. The choice of methods and hardware as well as some of the difficulties that are expected to arise in the development process will be explained.
+All parts used in our product is existing hardware that we purchase
+The choice of methods and hardware as well as some of the difficulties that are expected to arise in the development process will be explained.
 \subsubsection{Methods and Hardware}
 There are four steps to the process performed by the welding tool proposed in this report:
-\begin{itemize}
-	\item \textbf{Marking:} A worker will mark the area where the weld should be performed.
-	\item \textbf{Global Localization:} When the worker has marked the area to be welded on a object the robot should identify the area. This should be able to happen at a distance of up to $1.5m$. Once identified, the robot should move the tool towards the area, stopping at an appropriate distance.
-	\item \textbf{Local Localization:} With the tool closer to the area to be welded, it will detect the gap between the metal surfaces and, by following the gap, record the coordinates of the welding path.
-	\item \textbf{Steady Welding:} Once the path has been recorded, it is the responsibility of the sensor system to provide the feedback necessary to ensure that the distance to the object is kept constant throughout the welding procedure. The distance and speed along with other factors such as power use is determined by the parameters set by the worker: Metal type, thickness etc.
-\end{itemize}
-Following is an explanation of the methods used in each step and the potential problems associated with them.
-\paragraph{Marking}~~\\
-The marking will be done by colouring the area around the weld. Using colour will decrease the complexity of the localization process. However, there are a few problems associated with this approach: 
+\begin{description}
+	\item[Marking:            ] A worker will mark the area where the weld should be performed.
+	\item[Global Localization:] When the worker has marked the area to be welded on a object the robot should identify the area. This should be able to happen at a distance of up to $1.5m$. Once identified, the robot should move the tool towards the area, stopping at an appropriate distance.
+	\item[Local Localization: ] With the tool closer to the area to be welded, it will detect the gap between the metal surfaces and, by following the gap, record the coordinates of the welding path.
+	\item[Steady Welding:     ] Once the path has been recorded, it is the responsibility of the sensor system to provide the feedback necessary to ensure that the distance to the object is kept constant throughout the welding procedure. The distance and speed along with other factors such as power use is determined by the parameters set by the worker: Metal type, thickness etc.
+\end{description}
+The process is being illustrated in figure \ref{programming_state_diagram}. Following is an explanation of the methods used in each step and the potential problems associated with them.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[node distance=3cm]
+\tikzstyle{state} = [ellipse, draw, color=blue!20, fill=blue!20, text = black, text width = 1.5cm, minimum height = 1.5cm, text centered]
+
+\node[state, name=mark] at (0,0)            {Mark};
+\node[state, name=global,  right of=mark]   {Find marking};
+\node[state, name=local,   right of=global] {Find seam};
+\node[state, name=program, right of=local]  {Record path};
+\node[state, name=weld,    right of=program]{Weld};
+
+\draw[->] (mark)     to[out=45,in=135]  node[above] {  }               (global);
+\draw[->] (global)   to[out=45,in=135]  node[above] {Move closer}        (local);
+\draw[->] (local)    to[out=45,in=135]  node[above] {Move along seam}  (program);
+\draw[->] (program)  to[out=225,in=315] node[below] {Move out  }  (global);
+\draw[->] (program)  to[out=45,in=135]  node[above] {Save program  }   (weld);
+\end{tikzpicture}
+\caption{Programming process with our solution}
+\label{programming_state_diagram}
+\end{figure}
+
+\paragraph*{Marking}~\\
+The marking will be done by colouring the area around the weld. 
+Using colour will decrease the complexity of the localization process. 
+However, there are a few problems associated with this approach: 
 \begin{itemize}
 	\item[] Usually you will want the area around the weld to be as clean as possible to achieve the highest quality weld.
 	\item[] The material used for colouring should not fill out the gap between the metals.
 \end{itemize}
-To deal with the first issue a material that is flammable or easily deteriorated by heat could be used. This way the color is quickly removed when the welding process begins. However, the welder will need to start the weld on the coloured area, potentially lessening the quality of the first part of the weld. To circumvent this problem is was proposed to use a material that is deteriorated by exposure to UV light. This approach introduces its own problems though. Using UV light means that anyone working in the same room as the robot should be wearing protective glasses to avoid injury. Additionally this also requires the tool to be fitted with a system that can do the UV light exposure, adding to the overall complexity and cost of the system.\\
+To deal with the first issue a material that is flammable or easily deteriorated by heat could be used. 
+This way the color is quickly removed when the welding process begins. 
+However, the welder will need to start the weld on the coloured area, potentially lessening the quality of the first part of the weld. 
+To circumvent this problem is was proposed to use a material that is deteriorated by exposure to UV light. 
+This approach introduces its own problems. 
+Using UV light means that anyone working in the same room as the robot should be wearing protective glasses to avoid injury. 
+Additionally this also requires the tool to be fitted with a system that can do the UV light exposure, adding to the overall complexity and cost of the system.\\
 The second problem requires that any material used should be sufficiently viscously and applied sparingly enough such that the gap between the metals to be welded is still detectable.
-\paragraph{Global Localization}~~\\
-The reasoning behind using a colouring method for marking the area to be welded is quite simply that it allows for using a camera and computer vision to do the localization. These are well understood, existing technologies with free options such as \texttt{OpenCV}\footnote{OpenCV: OpenCV is an open source computer vision library. www.opencv.org}. The tool will take a picture of the object and identify the coloured area. Now the tool is ready to approach the area, however it is necessary to detect the distance to the area. This will be done using a laser range scanner. Now, with the tool close to the object, the system is ready for the next step.
-\paragraph{Local Localization}~\\
-At this stage the camera and laser range scanner will be used to detect the complete path that the robot must follow in order to perform a high quality weld in the desired location. Some problems arise at this stage:
+
+It is impossible to give all information with a marking tool alone.
+There will be an touch interface on a tablet near the base of the robot that allows the user to change the settings such as metal type and welding angles. 
+We aim to allow the same level of control to the workers as they have with current programming tools.
+\paragraph*{Global Localization}~\\
+In global localization we find the markings.
+The reasoning behind using a colouring method for marking the area to be welded is quite simply that it allows for using a camera and computer vision to do the localization. 
+These are well understood, existing technologies with free options such as \texttt{OpenCV}\footnote{OpenCV: OpenCV is an open source computer vision library. www.opencv.org}. 
+The tool will take a picture of the object and identify the coloured area. 
+Now the tool is ready to approach the area, however it is necessary to detect the distance to the area. 
+This will be done using a laser range scanner. Now, with the tool close to the object, the system is ready for the next step.
+\paragraph*{Local Localization}~\\
+In local localization we find the welding seam.
+At this stage the camera and laser range scanner will be used to detect the complete path that the robot must follow in order to perform a high quality weld in the desired location. 
+Some problems arise at this stage:
 \begin{itemize}
 	\item[] The robot will have to be equipped with a sensory system to avoid collision with the object that is being welded upon. 
 %This system will not be considered in this report and collisions are assumed to not be possible for the remainder of the report.
-	\item[] Both while recording the path and during the welding process, it is crucial that the sensor system is maintained at the correct angle in relation to the object. While recording the path the sensor system should be perpendicular to the object, while the angle should remain between $10-20^\circ$ when welding to obtain the highest quality weld.
+	\item[] Both while recording the path and during the welding process, it is crucial that the sensor system is maintained at the correct angle in relation to the object. 
+% 	While recording the path the sensor system should be perpendicular to the object, while the angle should remain between $10-20^\circ$ when welding to obtain the highest quality weld.
 \end{itemize}
 In order to avoid collisions an automatic path planner will be implemented. This allows for the robot to use sensory equipment to detect whether using a specific path will result in collision with the object.
-A way of determining the angle of the tool in relation to the object must be developed; Preferably using the sensory equipment already available on the system.  
-\paragraph{Steady Welding}~\\
-When the path has been recorded the welding can begin. In order to keep the welder at a constant distance to the object the laser will be used to provide feedback. The speed of the weld as well as the distance to the object is decided on the basis of the parameters the worker has provided in the interface.
+Determining the angle of the tool in relation to the object can be done with the laser range scanner and using the robots positioning. This could potentially become different for every type of welding robot and thus would be problematic to develop.
+
+When the path of a single weld has been recorded the robot will move back to find a new marked area. This leads to less motion planning as the way towards the mark was possible the robot will can always find it's way back.
+
+\paragraph*{Steady Welding}~\\
+When the path has been recorded the welding can begin. 
+The program is now uploaded and the robot will be able to follow the path.
+In order to keep the welder at a constant distance to the object the laser will be used to provide feedback. 
+This way the program is usable for objects where the difference is limited to assembly imperfections.
+The speed of the weld as well as the distance to the object is decided on the basis of the parameters the worker has provided in the interface.
