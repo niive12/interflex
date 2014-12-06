@@ -11,8 +11,6 @@ Figure \ref{ClassDiagram} shows the current state architecture of the software s
 \caption{A simple class diagram for the prototype software system}
 \label{ClassDiagram}
 \end{figure}
-\thomas{Structure/Description, same thing - revise}
-\subsubsection{Description of Software Architecture}
 The system is going to consist of multiple hardware parts, these parts will require interfaces for communication. This communication is going to happen not only between hardware, but also internally between different parts of the software.
 In this section, these different interfaces will be described. 
 
@@ -93,12 +91,8 @@ These actions can be divided into the following functions:
 \item \textbf{ConvertToMovement:} The final coordinates generated from the Associate class is being converted to an input which a robot can use. 
 
 \end{itemize}
-\thomas{The list below seems like it could use an explanation for its existance? Also, do they need a paragraph each?}
-\paragraph*{Dependencies}~\\
-Using libraries can create dependencies within the system, mainly when a used library is dependant on other libraries. In this project, the OpenCV library will be in focus when extracting data of the line that the robot has to weld.   
-\paragraph*{Database}~\\
-A database to log every entry is favourable for the end customer, but it is not a part of the add-on and therefore not a part of the development process.
-\paragraph*{System attributes}~\\
+
+\subparagraph*{System attributes}~\\
 System attributes describes the qualities of a system in short terms. Primary qualities of the system is going to be:
 
 \begin{itemize}
@@ -109,11 +103,20 @@ System attributes describes the qualities of a system in short terms. Primary qu
 \item Adaptability
 . 
 \end{itemize}
-These are the attributes needed for a system to be able to adapt to any robot welding system, while maintaining its reliability and precision.
-\subsubsection{Design decisions}
-Basically the system is set to follow the 3 layer structure. But as the system evolves it can be hard to predict whether this is going to change or not. \thomas{surely this wont change if that's the structure we decide to use.}
+These are the attributes needed for a system to be able to adapt to any robot welding system, while maintaining its reliability and precision. These keywords are to have in mind when developing the system at all times.
 
-A factor which is common in the industry, is the request for real time actions within a network. This is not direct request, since a worker handles the robot and leaves it for its time to work. This mean that no special BUS networks are needed within the system and that a TCP protocol Ethernet network is a viable option. \thomas{I don't quite understand the implications of this? real time? Ethernet? what?}
+\subparagraph*{Dependencies}~\\
+Using libraries can create dependencies within the system, mainly when a used library is dependant on other libraries. This can cause multiple version dependencies and cause a chain of them. In this project, the OpenCV library will be in focus when extracting data of the line that the robot has to weld. The term 'Dependency Hell' is used when written above is occurring. Developers of the project has to be aware of this problem and solve it by using package managers that can solve dependencies automatically by updating libraries to the correct versions. 
+
+\subparagraph*{Database}~\\
+A database to log every entry is favourable for the end customer, but it is not a part of the add-on and therefore not a part of the development process.
+
+\subsubsection{Design decisions}
+Basically the system is set to follow the 3 layer structure. But as the system evolves it can be hard to predict whether this is going to change or not. 
+
+\simon{Formuler please}
+
+A factor which is common in the industry, is the request for real time actions within a network. This is not direct request, since a worker handles the robot and leaves it for its time to work. This mean that no special BUS networks are needed within the system and that a TCP protocol Ethernet network is a viable option. 
 
 \subsubsection{Life cycle}
 
@@ -126,6 +129,5 @@ When the product has been developed and released it is far from complete, this i
 \caption{The life cycle describes the process of establishing and maintaining a system}
 \label{SDLC}
 \end{figure}
-\thomas{pretty graph, but needs a better explanation to be useful}
-This process is not very detailed, because it is up to the developers and manage to choose a specific development process or a combination of them.
+This process is not very detailed, because it is up to the developers and manage to choose a specific development process or a combination of them. But the actual purpose of the model is to go through the primary phases of software development in a correct order. With a start at gathering requirements ending in an evolution of the software. Each iteration should result in a new and patched version of the software. The actual model shows a waterfall model, which have major areas to focus on at a time. By following this model you can avoid doing dependant activities too early in the process. 
 
