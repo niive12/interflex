@@ -1,0 +1,63 @@
+\subsubsection{Development Plan}
+To get an overview of the software development an estimate of the complexity of each sub problem was made.
+Then each task was considered for the potential for group work.
+We have a constraint of 3 programmers in the group.
+Adding more people to a task doesn't always make the task easier to solve so we decided to make estimates based on the programmers we have in the group.
+Since the hardware testing is crucial to the software development we have put this together with the software development plan. 
+We have plotted a Gantt chart over the software development and the hardware development in figure \ref{development_gantt}.
+The development is being done by dividing our team into three groups. 
+
+The first group will be responsible for the software. 
+This group will implement the functionality that is required.
+
+The second group will be responsible for the hardware. 
+They will be making the designs and planning what test should the sensor be able to pass.
+
+The third group will be responsible for marketing. 
+We need someone to be in charge of getting contacts and funding. 
+
+We need to develop the control software that allows us to control the robot using the the sensors we have picked. 
+
+While the first parts of the control software is being developed we need a source of funding.
+In order to develop this successfully the rest of the team needs to know that someone is fighting to getting funding for the initial year.
+Investing in our company this early will be a large risk so finding a invester that is willing to pay is deemed less likely. 
+If we get a loan in a bank we are not likely to get a low interest but right now is this the possibility we use in our budget.
+When we have funding for the first year we can look for customers that is willing to sell our products and help them with integrating our product in their line of products.
+
+The testing phase depends on the Control software and the funding. 
+During the testing phase we will have to go back and add functionality to the Control Software. 
+While a part of our team is working on the testing the software team will make the interface.
+
+The time estimates of the complexity can be found in appendix \ref{app:software_development_time}.
+We have estimated the time to develop the software to 51.5 weeks.
+\nikolaj{I have not created the appendix with the timing yet... maybe it should be a large table with all our timing estimates or something}
+
+\begin{figure}[ht]
+\centering
+\begin{tabular}{ll}
+Week                        &\begin{tikzpicture}[scale=\ganttScaling] \node at (0,0) {0}; \foreach \x in {1,...,5} \node at ({\x * 10},0) {\x0};  \end{tikzpicture}\\
+\multicolumn{2}{l}{\textbf{Control Software}}\\
+% Laser range                 &\begin{tikzpicture}[scale=\ganttScaling] \draw[line width=2mm,color=blue!50] (0,0) ( 0.00,0)  --    ++(  0.27,0);  \end{tikzpicture}\\
+Laser range                                          &\ganttLine{blue!50} {  0.00 }{  0.27 }\\
+UV-flash                                             &\ganttLine{blue!50} {  0.00 }{  0.27 }\\
+Camera                                               &\ganttLine{blue!50} {  0.00 }{  2.16 }\\     
+OpenCV                                               &\ganttLine{blue!50} {  2.16 }{  6.08 }\\     
+Planning                                             &\ganttLine{blue!50} {  8.24 }{  4.05 }\\     
+Generate program                                     &\ganttLine{blue!50} { 46.08 }{  5.41 }\\ %51.49
+\multicolumn{2}{l}{\textbf{Software for interface}}\\                              
+Pistol angle                                         &\ganttLine{blue}    { 12.30 }{  2.70 }\\
+Metal type                                           &\ganttLine{blue}    { 12.30 }{  2.70 }\\
+Metal thickness                                      &\ganttLine{blue}    { 12.30 }{  2.70 }\\
+Communication                                        &\ganttLine{blue}    { 15.00 }{  2.70 }\\
+\multicolumn{2}{l}{\textbf{Hardware design}}\\                                                        
+Design (CAD)                                         &\ganttLine{red}     {  0.00 }{  4.05 }\\
+Testing                                              &\ganttLine{red}     { 12.30 }{ 20.27 }\\
+Functional prototype                                 &\ganttLine{red}     { 32.57 }{ 13.51 }\\ %46.08
+\multicolumn{2}{l}{\textbf{Marketing}}\\                                                        
+Find funding                                         &\ganttLine{purple}  {  0.00 }{ 12.30 }\\
+Get contract with sellers                            &\ganttLine{purple}  { 12.30 }{ 15.70 }\\
+\parbox[t]{3cm}{Help sellers convince early adopters}&\ganttLine{purple}  { 28.00 }{ 18.08 }\\ %46.08
+\end{tabular}
+\caption{Time table for development the first year}
+\label{development_gantt}
+\end{figure}
