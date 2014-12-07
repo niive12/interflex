@@ -110,7 +110,8 @@ Using libraries can create dependencies within the system, mainly when a used li
 
 \subparagraph*{Database}~\\
 A database to log every entry is favourable for the end customer, but it is not a part of the add-on and therefore not a part of the development process.
-\thomas{If it is favourable for the end user to HAVE a database but we decide not to provide it, we better come up with a good reason for not providing it}
+
+The add-on should be able to output to a log file, but handling the storage is in general done by an external server, that the customer should provide themselves.
 
 \subsubsection{Design decisions}
 Basically the system is set to follow the 3 layer structure. But as the system evolves it can be hard to predict whether this is going to change or not. 
