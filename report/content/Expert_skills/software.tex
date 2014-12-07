@@ -81,7 +81,7 @@ Requirements are fundamental to specify the tasks to solve when creating a softw
 
 \end{itemize}
 
-\paragraph*{Functions}
+\paragraph*{Functions}~\\
 
 The system can be divided into three major functions, which handles the process of detecting the place to weld, associate x, y and z coordinates and convert them into the movement program of a robot.
 
@@ -90,7 +90,7 @@ These actions can be divided into the following functions:
 \begin{itemize}
 
 \item \textbf{DetectLine:} Using functionality from the OpenCV library, this function is to detect the workspace area, by detecting the color marked by a worker, then detecting the line within.
-\item \textbf{Associate:}This class has the task of gathering the two different data (camera coordinations and laser depth coordinations).
+\item \textbf{Associate:} This class has the task of gathering the two different data (camera coordinations and laser depth coordinations).
 \item \textbf{ConvertToMovement:} The final coordinates generated from the Associate class is being converted to an input which a robot can use. 
 
 \end{itemize}
