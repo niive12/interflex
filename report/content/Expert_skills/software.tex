@@ -117,7 +117,10 @@ Basically the system is set to follow the 3 layer structure. But as the system e
 
 \simon{Formuler please}
 
-A factor which is common in the industry, is the request for real time actions within a network. This is not direct request, since a worker handles the robot and leaves it for its time to work. This mean that no special BUS networks are needed within the system and that a TCP protocol Ethernet network is a viable option. 
+A factor which is common in the industry, is the request for real time actions within a network. Real time is when a system can deliver every time it is needed. Real time is very network dependant because of the deadlines within an automated production. 
+Real time is not requested in our system, since a worker handles the robot and leaves it for its time to work. This mean that no special BUS networks are needed within the system and that a TCP protocol Ethernet network is a viable option. TCP allows packet loss on a network with the consequence of retransmission.
+
+In general this mean that the end customers will not have to implement an expensive network between our add-on and the robot. 
 
 \subsubsection{Life cycle}
 
