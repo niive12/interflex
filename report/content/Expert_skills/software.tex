@@ -2,9 +2,10 @@
 Software is one of the essentials of the product, it is also one of the challenges for the business to exist. Since a business plan describes the fundamentals of the company and how it is going to make money, it is a critical section to describe the product, which will be done during this section. When there is a need of developing a software, the usual way would be to collect requirements from stakeholders. Currently the group is the only known stakeholder and therefore it is hard to create the usual procedure for the development. This would be a acquiring of requirements, create use cases, design a class diagram and keep it developed during the process. 
 
 The development process is one of the key activities during the start up of the company. Therefore it is important to have focus of this specific process and making the choice of the right process. When in need of rapid development activities within the Scrum process would be attractive for the group, because it would implement the daily meeting which is used for sharing of problems and ideas for solving them. This requires an expert knowledge to become a useful process, which the group is eligible of.
+\thomas{Not a big fan of the sudden clearpage - We end up with a humongous pile of random whitespace. Whitespace is to be avoided at all cost}
 \clearpage
 \paragraph*{Structure of the Software System}
-Figure \ref{ClassDiagram} shows the current state architecture of the software system. The system is not yet complete and will grow during the development process. The modifications are hard to predict at this very moment, but this displays the main functions of the system and what focus areas there are within the development. 
+Figure \ref{ClassDiagram} shows the current state of the architecture of the software system. The system is not yet complete and will grow during the development process. The modifications are hard to predict at this very moment, but this displays the main functions of the system and what focus areas there are within the development. 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\textwidth]{graphics/ClassDiagram}
@@ -15,7 +16,7 @@ The system is going to consist of multiple hardware parts, these parts will requ
 In this section, these different interfaces will be described. 
 
 \paragraph*{Hardware Interfaces}~\\
-Hardware, in the form of sensors, is a major part of the product. These will require interfaces to communicate with the software system. The default software for these hardware parts does not necessarily output comparable data. The usual way to approach this issue is to implement adapter patterns, which includes a facade pattern. Below is a list of the hardware interfaces used in the system:
+Hardware, in the form of sensors, is a major part of the product. These will require interfaces to communicate with the software system. The default software for these hardware parts does not necessarily output comparable data. The usual way to approach this issue is to implement adapter patterns, which includes a facade pattern. Two hardware interfaces are used in the system:
 
 \begin{itemize}
 
@@ -24,12 +25,11 @@ Hardware, in the form of sensors, is a major part of the product. These will req
 
 \end{itemize}
 
-Both the camera and laser scanner will come from different manufacturers, therefore there is no guarantee for compatibility of the manufacturers software. This is where an adapter pattern becomes useful within the system.
+The camera and the laser scanner will most likely come from different manufacturers, therefore there is no guarantee for compatibility of the included software. This is where an adapter pattern becomes useful within the system.
 
-The network interface would have to fit specific standards within robotic interfaces. It is very dependant on the future partners and their choice of robotic interfaces.
-  
+The network interface will have to fit any standards that exist for robotic interfaces. Additionally the interface is very dependant on the specific partner's software and their choice of robotic interfaces.
 \paragraph*{Software Interfaces}~\\
-Software interfaces are often used when it comes to facade parts of a system. This helps making the objects unknown to other objects in the system. The purpose is to make a system with low coupling and high cohesion. Interfaces are also common to use when you have several objects or classes which need the same method, so to lower the amount of 'copy + paste' code, you should implement interfaces instead. It is hard to identify methods that should be reinvented within the current prototype class diagram, which is why this section will not cover them. That is why the class diagrams will be updated during the development process of the software. Here is a list of the different software interfaces used in the system:
+Software interfaces are often used when it comes to the facade of a system. This helps making the objects unknown to other objects in the system. The purpose is to make a system with low coupling and high cohesion. Interfaces are also common to use when you have several objects or classes which need the same method, so to lower the amount of 'copy + paste' code, you should implement interfaces instead. It is hard to identify methods that should be reinvented within the current prototype class diagram, which is why this section will not cover them. That is why the class diagrams will be updated during the development process of the software. There are two different software interfaces used in the system:
 
 \begin{itemize}
 
@@ -39,9 +39,9 @@ Software interfaces are often used when it comes to facade parts of a system. Th
 \end{itemize}
 
 \paragraph*{User Interfaces}~\\
-User interfaces require fundamental design to become useful for the end users. The design process often requires a huge amount of communication with the customers and stakeholders. User friendliness is the keyword within the design process. 
+The main issue when designing a user interface is to keep it user friendly, however, it is still important that the requirements set by the stakeholders are taken into careful consideration. During the design process these requirements should be updated frequently to avoid any misunderstandings.
 
-The Add-On will come with a tablet which provides the user interface. Different functionalities are provided by this interface: 
+The add-on will come with a tablet which will be the platform for the user interface. Different functionalities are provided by this interface: 
 
 \begin{itemize}
 
@@ -55,7 +55,7 @@ The Add-On will come with a tablet which provides the user interface. Different 
 This enables the end user to modify the welding process in a few steps. Importance of user friendliness is immense, since the time spent on modifying the process has to be compared to the time the user could spend somewhere else.
 
 \subsubsection{Specific requirements}
-Requirements are fundamental to specify the tasks to solve when creating a software system. Requirements can be divided into categories, which is done below:
+Requirements are fundamental to specify the tasks to solve when creating a software system. Requirements can be divided into categories as seen here:
 
 \textbf{Functional Requirements:}
 \begin{itemize}
@@ -80,7 +80,7 @@ Requirements are fundamental to specify the tasks to solve when creating a softw
 
 \paragraph*{Functions}
 
-The system can be divided into three major functions, which handles the process of detecting the place to weld, associate x,y an z coordinates and convert them into the movement program of a robot.
+The system can be divided into three major functions, which handles the process of detecting the place to weld, associate x, y and z coordinates and convert them into the movement program of a robot.
 
 These actions can be divided into the following functions:
 
@@ -103,13 +103,14 @@ System attributes describes the qualities of a system in short terms. Primary qu
 \item Adaptability
 . 
 \end{itemize}
-These are the attributes needed for a system to be able to adapt to any robot welding system, while maintaining its reliability and precision. These keywords are to have in mind when developing the system at all times.
+These are the attributes needed for a system to be able to adapt to any robot welding system, while maintaining its reliability and precision. These keywords are to be kept in mind when developing the system at all times.
 
 \subparagraph*{Dependencies}~\\
-Using libraries can create dependencies within the system, mainly when a used library is dependant on other libraries. This can cause multiple version dependencies and cause a chain of them. In this project, the OpenCV library will be in focus when extracting data of the line that the robot has to weld. The term 'Dependency Hell' is used when written above is occurring. Developers of the project has to be aware of this problem and solve it by using package managers that can solve dependencies automatically by updating libraries to the correct versions. 
+Using libraries can create dependencies within the system, mainly when a used library is dependant on other libraries. This can cause multiple version dependencies and cause a chain of them. In this project, the OpenCV library will be in focus when extracting data of the line that the robot has to weld. The term 'Dependency Hell' is used to describe the situation explained above. Developers of the project have to be aware of this problem. It is possible to solve it by using package managers that can solve dependencies automatically by updating libraries to the correct versions. 
 
 \subparagraph*{Database}~\\
 A database to log every entry is favourable for the end customer, but it is not a part of the add-on and therefore not a part of the development process.
+\thomas{If it is favourable for the end user to HAVE a database but we decide not to provide it, we better come up with a good reason for not providing it}
 
 \subsubsection{Design decisions}
 Basically the system is set to follow the 3 layer structure. But as the system evolves it can be hard to predict whether this is going to change or not. 
@@ -129,5 +130,4 @@ When the product has been developed and released it is far from complete, this i
 \caption{The life cycle describes the process of establishing and maintaining a system}
 \label{SDLC}
 \end{figure}
-This process is not very detailed, because it is up to the developers and manage to choose a specific development process or a combination of them. But the actual purpose of the model is to go through the primary phases of software development in a correct order. With a start at gathering requirements ending in an evolution of the software. Each iteration should result in a new and patched version of the software. The actual model shows a waterfall model, which have major areas to focus on at a time. By following this model you can avoid doing dependant activities too early in the process. 
-
+This process is not very detailed, because it is up to the developers and manage to choose a specific development process or a combination of them. But the actual purpose of the model is to go through the primary phases of software development in a correct order. With a start at gathering requirements ending in an evolution of the software. Each iteration should result in a new and patched version of the software. The actual model shows a waterfall model, which have major areas to focus on at a time. By following this model you can avoid doing dependant activities too early in the process.
