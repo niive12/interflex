@@ -17,7 +17,7 @@ To make a product as soon as possible we would start working with a single compa
 \subsubsection{End users}
 Our end users is the our customers clients and a lot of our considerations.
 Since we don't have a direct relation with the end users we get information about their needs from our customers.
-The end user want to spend the smallest amount of time on programming and the highest amount of welding time out of their robots.
+The end user want to spend the smallest amount of time on programming and the highest amount of time welding with their robots.
 We want to make robot programming more intuitive to achieve these demands.
 
 \subsubsection{Market}
@@ -30,9 +30,15 @@ Valk Welding customers is mainly using offline programming.
 With a complete knowledge of the item that should be welded and the positioning of the robot they can program the way an item should be welded.
 The programming is made in a very high level language that keeps track of the coordinates, the speed and the angles of the weld.
 With macros that aid the programmer making the same routines in different places the time it takes to program the robot is drastically reduced.
+<<<<<<< HEAD
 We want to be able to replace the training course required to learn how to do offline programming and the end customer will save money by having a smaller staff and, potentially, producing more items. 
 Currently a training course in online programming costs around 100,000 DKK\cite{valk_welding_summary}. 
 The average yearly pay of a welding robot programmer 370,000 DKK\cite{welding_salary}. 
+=======
+We want to be able to replace the training course required to learn how to do offline programmeing and the end customer will save money by having a smaller staff and, potentially, producing more items. 
+Currently a training course in online programming costs around 100.000 DKK\cite{valk_welding_summary}. 
+The average yearly pay of a welding robot programmer 370.000 DKK\cite{welding_salary}. 
+>>>>>>> origin/master
 
 Another potential customer would be the company Weld-Tech ApS. 
 This company is already working with automatic welding, but currently has the restriction that all items need to have identical patterns. 
@@ -41,18 +47,15 @@ This might hinder their ability to attract new customers. an issue that we may b
 When the product is finished we want to expand to be able to use this technology for bigger and more complex welding jobs.
 
 \subsubsection{Trends}
-The trends in the welding industry are constantly changing. 
+The production industry is trending more and more towards automation.
 Companies invest heavily in new technologies to gain a competitive advantage. 
-This means that there are always incorporating new ideas to this sector, but we must always look at the cost stemming and the final price of the product, as SMEs are not willing to pay much for slightly improve welding method.
-\nikolaj{We need some kind of source on this}
-\thomas{These two paradigms are explained elsewhere... Dual Info FTW!}
-There are two programming paradigms that are used today.
-
-One method is online programming, where programming is done by physically moving the robot around and logging the points it has to move. For a complex product, this may take up to 3 or 4 weeks.
-
-Another method is offline programming where programming is done my making a program around a CAD model of the product.
-It usually takes 2 to 3 days to make a similar program.
-
-The field of automatic programming is still in development and many companies create their prototypes. 
-What stops these products in becoming popular are their tradeoffs with a higher price without adding any real flexibility.
-\thomas{Do we have reason to believe that this is the case?}
+The two main programming paradigms for robots in use today are:
+\begin{enumerate}
+\item \textbf{Online Programming:} This paradigm depends on being able to guide the robot throughout all the necessary welding seams. As a result, the robot will be unable to run production for the full length of the programming cycle.
+\item \textbf{Offline Programming:} This method is the preferred method in use today. It requires that a CAD model of the product exists. The programming of the robot is then done using the CAD model. This means that during the entire programming process the robot can still work on other products and only has to be interrupted when the program is ready to be put in production. Not only does offline programming require much less downtime of the robot, the programming itself is also 5-10 times faster than the conventional online programming scheme.	
+\end{enumerate}
+The field of automatic programming is still in development and many companies create prototypes. We believe that we can add significant progress to a third paradigm that will expand the use of robot welders to smaller businesses and productions:
+\begin{enumerate}
+	\item[3.]{\textbf{Off-site Programming:}} This paradigm is currently in development and holds great promise for especially one-off productions. A program for a welding robot is made using some sort of teaching-mechanism. 
+	This way, any worker with knowledge of the product in question can program the robot.
+\end{enumerate}
