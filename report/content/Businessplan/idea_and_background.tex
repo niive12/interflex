@@ -1,10 +1,67 @@
-\subsection{Idea and background}
-This section briefly covers a description of the problem that we are trying to solve, how we are going to solve it, which customers that could have an interest in it and how we would benefit from it and create profit.
+\begin{landscape}
+\begin{figure}
+\centering
+  \begin{tikzpicture}[node distance=2mm,scale=1, every node/.style={scale=1}]
+  \begin{scope}[start chain]
+    \node[minimum height=10cm,   minimum width=4.4cm,  on chain, text width=4cm, draw, name=KP]  (0,0)                  
+    {\scriptsize \textbf{Key Partners:}\\ 
+We want partners like Valk Welding who is a robot welding company with a broad network. For supplies, no specific supplier is intended.
+    }; 
+      \begin{scope}[start branch]
+	\node[minimum height=4cm,   minimum width=11.3cm,    on chain=going below, text width=9.5cm, draw, name=CoS,xshift=3.45cm] 
+	{\scriptsize\textbf{Cost Structure:}
+Where are fixed costs in rental of premises, employees and etc. A big part of the cost structure is variable, its varies with the revenue. Like purchasing of supplies which is coherent with sales. 
+	}; 
+	\node[minimum height=4cm,   minimum width=11.34cm,    on chain=going right, text width=9.5cm, draw, name=RS]  
+	{\scriptsize\textbf{Revenue Streams:}\\
+A revenue stream is generated through the sales channel to the various robot-developing companies, who end up providing the product to the end customers.
+We will develop our product for specific welding robots for a price, providing another potential revenue stream. 
+Patenting the product will be also an important part to maintain revenue, as it will allow us to charge a significant sum of money from companies who wish to use our technology.
+	}; 
+      \end{scope}
+      
+      
+      \begin{scope}[start branch]
+	\node[minimum height=4.84cm, minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=KA,yshift=2.58cm]     
+	{\scriptsize\textbf{Key Activities:}\\
+Main activity in the beginning will be development of concept, later on it will be production of concept in parallel with improvement of concept for optimal market/customer fitness.
+	};
+      \end{scope}
+      \node[minimum height=4.84cm, minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=KR,yshift=-2.58cm]              
+      {\scriptsize\textbf{Key Resources:}
+In the development phase we need start-up capital. Reliable suppliers is a must to have a reliable business. A robot welding company as partner is preferred. 
+      }; 
+      \node[minimum height=10cm,   minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=VP,yshift=2.58cm]                
+      {\scriptsize\textbf{Value Proposition:}
+We offer a flexible way to program welding robots. Which provides quality welding, efficiency, easy setup and training, reduction in quality controls and gives a significant reduction in labour hours.
+      };
+	\begin{scope}[start branch]
+	  \node[minimum height=4.84cm, minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=CR,yshift=2.58cm]              
+	  {\scriptsize\textbf{Customer Relationship:}
+We will have contact to our customers through feedback from end users. This will help us improve/maintain market fitness.
+	  }; 
+	\end{scope}
+      \node[minimum height=4.84cm, minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=Ch ,yshift=-2.58cm]              
+      {\scriptsize\textbf{Channels:}\\
+End users buy our product through welding robot companies/sellers. We will be participating in relevant conferences with partners. Provide a website with technical information of product, videos, contact information and etc.. Contact can also be by phone, email, chat/online support.	
+      };
+      \node[minimum height=10cm,   minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=CuS,yshift=2.58cm]               
+      {\scriptsize\textbf{Customer Segments:}\\
+Relevant customers are companies who are already in the zone of robotic welding, companies who could be interested in buying the product to supplement their own products. Primarily it will be customers who develop either robots or other technical parts for them.  
+Our end users will be SME's who uses welding with a frequent replacement of production.
+      };
+    \end{scope}
+    
 
-It will also contain a short presentation of members of the team and an explanation as to why we are the perfect fit for this start up company.
+  \end{tikzpicture}
+  \caption{Osterwalder Business Model}
+  \label{ost_business_model}
+\end{figure}
+\end{landscape}
 
 % \subsubsection{Customer segment}
-% Our end users will be SME's who uses welding with a frequent replacement of production. Our customers are robot welding companies/producers.
+% Relevant customers are companies who are already in the zone of robotic welding, companies who could be interested in buying the product to supplement their own products. Primarily it will be customers who develop either robots or other technical parts for them.  
+% Our end users will be SME's who uses welding with a frequent replacement of production.
 % \subsubsection{Value proposition}
 % We offer a flexible way to program welding robots. Which provides quality welding, efficiency, easy setup and training, reduction in quality controls and gives a significant reduction in labour hours.
 % \subsubsection{Channels}
@@ -12,7 +69,9 @@ It will also contain a short presentation of members of the team and an explanat
 % \subsubsection{Customer relationships}
 % We will have contact to our customers through feedback from end users. This will help us improve/maintain market fitness.
 % \subsubsection{Revenue}
-% Main revenue will come from sale of product to welding robot companies/sellers.
+% A revenue stream is generated through the sales channel to the various robot-developing companies, who end up providing the product to the end customers.
+% We will develop our product for specific welding robots for a price, providing another potential revenue stream. 
+% Patenting the product will be also an important part to maintain revenue, as it will allow us to charge a significant sum of money from companies who wish to use our technology.
 % \subsubsection{Key resources}
 % In the development phase we need start-up capital. Reliable suppliers is a must to have a reliable business. A robot welding company as partner is preferred. 
 % \subsubsection{Key activities}
@@ -22,97 +81,11 @@ It will also contain a short presentation of members of the team and an explanat
 % \subsubsection{Costs}
 % Where are fixed costs in rental of premises, employees and etc. A big part of the cost structure is variable, its varies with the revenue. Like purchasing of supplies which is coherent with sales. 
 
-\begin{figure}
-  \begin{tikzpicture}[node distance=2mm]
-  \begin{scope}[start chain]
-    \node[minimum height=5cm,   minimum width=2.2cm,  on chain, text width=2cm, draw, name=KP]  (0,0)                  
-    {\tiny \textbf{Key Partners:}\\ 
-%     We want partners like Valk Welding who is a robot welding company with a broad network. For supplies, no specific supplier is intended.
-    }; 
-      \begin{scope}[start branch]
-	\node[minimum height=2.42cm, minimum width=2.2cm,  on chain=going right, text width=2cm, draw, name=KA,yshift=1.29cm]     
-	{\tiny\textbf{Key Activities:}\\
-% 	Main activity in the beginning will be development of concept, later on it will be production of concept in parallel with improvement of concept for optimal market/customer fitness.
-	};
-      \end{scope}
-
-      \node[minimum height=2.42cm, minimum width=2.2cm,  on chain=going right, text width=2cm, draw, name=KR,yshift=-1.29cm]              
-      {\tiny\textbf{Key Resources:}
-%       In the development phase we need start-up capital. 
-%       Reliable suppliers is a must to have a reliable business. 
-%       A robot welding company as partner is preferred. 
-      }; 
-      \node[minimum height=5cm,   minimum width=2.2cm,  on chain=going right, text width=2cm, draw, name=VP,yshift=1.29cm]                
-      {\tiny\textbf{Value Proposition:}
-%       We offer a flexible way to program welding robots. 
-%       Which provides quality welding, efficiency, easy setup and training, reduction in quality controls and gives a significant reduction in labour hours.
-      };
-	\begin{scope}[start branch]
-	  \node[minimum height=2.42cm, minimum width=2.2cm,  on chain=going right, text width=2cm, draw, name=CR,yshift=1.29cm]              
-	  {\tiny\textbf{Customer Relationship:}
-% 	  We will have contact to our customers through feedback from end users. 
-% 	  This will help us improve/maintain market fitness.
-	  }; 
-	\end{scope}
-      \node[minimum height=2.42cm, minimum width=2.2cm,  on chain=going right, text width=2cm, draw, name=Ch ,yshift=-1.29cm]              
-      {\tiny\textbf{Channels:}\\
-%       End users buy our product through welding robot companies/sellers. 
-%       We will be participating in relevant conferences with partners. 
-%       Provide a website with technical information of product, videos, contact information and etc. 
-%       Contact can also be by phone, email, chat/online support.	
-      };
-      \node[minimum height=5cm,   minimum width=2.2cm,  on chain=going right, text width=2cm, draw, name=CuS,yshift=1.29cm]               
-      {\tiny\textbf{Customer Segments:}\\
-%       Our end users will be SME's who uses welding with a frequent replacement of production. 
-%       Our customers are robot welding companies/producers.
-      };
-    \end{scope}
-    
-  \begin{scope}[start branch]
-    \node[minimum height=2cm,   minimum width=5.906cm,    on chain, text width=5.7cm, draw, name=CoS] at(-1.325,-3.66) 
-    {\tiny\textbf{Cost Structure:}
-%     Where are fixed costs in rental of premises, employees and etc. 
-%     A big part of the cost structure is variable, its varies with the revenue. 
-%     Like purchasing of supplies which is coherent with sales. 
-    }; 
-    \node[minimum height=2cm,   minimum width=5.906cm,    on chain=going right, text width=5.7cm, draw, name=RS]  
-    {\tiny\textbf{Revenue Streams:}\\
-%     Main revenue will come from sale of product to welding robot companies/sellers.
-    }; 
-  \end{scope}
-
-  \end{tikzpicture}
-  \caption{Osterwalder Business Model}
-  \label{ost_business_model}
-\end{figure}
-
-\subsubsection{Customer segment}
-Relevant customers are companies who are already in the zone of robotic welding, companies who could be interested in buying the product to supplement their own products. Primarily it will be customers who develop either robots or other technical parts for them.  
-Our end users will be SME's who uses welding with a frequent replacement of production.
-\subsubsection{Value proposition}
-We offer a flexible way to program welding robots. Which provides quality welding, efficiency, easy setup and training, reduction in quality controls and gives a significant reduction in labour hours.
-\subsubsection{Channels}
-End users buy our product through welding robot companies/sellers. We will be participating in relevant conferences with partners. Provide a website with technical information of product, videos, contact information and etc.. Contact can also be by phone, email, chat/online support.	
-\subsubsection{Customer relationships}
-We will have contact to our customers through feedback from end users. This will help us improve/maintain market fitness.
-\subsubsection{Revenue}
-A revenue stream is generated through the sales channel to the various robot-developing companies, who end up providing the product to the end customers.
-We will develop our product for specific welding robots for a price, providing another potential revenue stream. 
-Patenting the product will be also an important part to maintain revenue, as it will allow us to charge a significant sum of money from companies who wish to use our technology.
-\subsubsection{Key resources}
-In the development phase we need start-up capital. Reliable suppliers is a must to have a reliable business. A robot welding company as partner is preferred. 
-\subsubsection{Key activities}
-Main activity in the beginning will be development of concept, later on it will be production of concept in parallel with improvement of concept for optimal market/customer fitness.
-\subsubsection{Key partners}
-We want partners like Valk Welding who is a robot welding company with a broad network. For supplies, no specific supplier is intended.
-\subsubsection{Costs}
-Where are fixed costs in rental of premises, employees and etc. A big part of the cost structure is variable, its varies with the revenue. Like purchasing of supplies which is coherent with sales. 
-
 
 \thomas{This section seems to repeat (technically this is the first occurence) information that will be mentioned at least 2 more times in later chapters - if it is meant as a brief resume it should be revised! Otherwise deleted.}
 
 
-\subsection{Idea and background}
+\subsection{Idea and Background}
 This section briefly covers a description of the problem that we are trying to solve, how we are going to solve it.
 
 It will also contain a short presentation of members of the team and an explanation as to why we are the perfect fit for this start up company.
