@@ -56,10 +56,9 @@
 \input{./content/Collaboration/Belbin}
 \input{./content/Collaboration/Swot}
 \input{./content/Collaboration/GPITGAIT}
-\input{./content/Collaboration/Collaborameter}
 \input{./content/Collaboration/conclusion}
 \clearpage
-\section{Innovation methods}
+\section{Innovation and Business}
 \input{./content/Innovation_and_business/pictures}
 
 \include{./content/Innovation_and_business/brainstorm}
@@ -72,23 +71,16 @@
 \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}% Depth of appendix in table of content
 \captionsetup{list=no}%remove figures from appendix on list of content
 %%%%% Appendices should go here %%%%%%%
-\input{./content/Businessplan/PriceofProduct}
-\newpage
-\input{./content/Appendix/Valk_meeting_resume}
-% \newpage
-% \input{./content/Appendix/risktable}
-\newpage
-\input{./content/Appendix/group_contract}
-\clearpage
+\include{./content/Appendix/Valk_meeting_resume}
+\include{./content/Businessplan/PriceofProduct}
+\include{./content/Appendix/detailed_budget}
+%\input{./content/Appendix/risktable}
+\include{./content/Appendix/group_contract}
 \section{Student-to-Student Teaching}
 \input{content/Appendix/Nikolaj_student_teaching} %first appendix should be input, rest should be include
-\newpage
-\input{content/Appendix/Thomas_student_teaching}
-\newpage
-\input{content/Appendix/casper_student_teaching}
-\newpage
-\input{content/Appendix/Simon_student_teaching}
-\newpage
-\input{content/Appendix/Xabier_student_teaching}
+\include{content/Appendix/Thomas_student_teaching}
+\include{content/Appendix/casper_student_teaching}
+\include{content/Appendix/Simon_student_teaching}
+\include{content/Appendix/Xabier_student_teaching}
 % \include{./content/Appendix/}
 \end{document}
