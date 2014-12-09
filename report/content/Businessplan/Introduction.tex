@@ -1,3 +1,100 @@
-This is one of the main parts of the project. Here will be described everything about the business plan, i.e. all the information the company needs, in order to conduct the business. The company must take into account different factors to take precedence over all risks and threats that may arise. Competition in the welding market is fierce, so we need to define exactly everything about our idea to compete against competitors. Unable to deal directly with multinationals, we must define our business idea and the customers we will want to have, in order to survive in this market. It will also be discussed in this section all risks to which they arise.
+In this section the business plan will be described in detail. 
+It includes all the required information the company needs to conduct its business. 
+The company must take into account different factors to take precedence over all risks and threats that may arise. 
+We need to define our business strategy in order to compete in the industry. 
+
+We investigated the problems by following the Osterwalder business model.
+In figure \ref{ost_business_model} the overview is shown. 
+The business plan provides a lot of important questions that a company should be able to answer.
+Any potential risk that endanger this idea from being a reality is described and dealt with in this report.
+
+\subsection{Business Model}
+The business model provides a short overview of the business plan. It will assist the company in creating, delivering and capturing value in economic and other contexts. It is also useful to represent core aspects of a business, such as, purpose, target customers, strategies, etc.  The model is divided into 9 categories: 
+\begin{table}[h!]
+\begin{tabular}{c c}
+\begin{minipage}{8cm}
+\begin{enumerate}
+\item Key Partners
+\item Key Resources
+\item Key Activities
+\item Value Proposition
+\item Channels
+\end{enumerate}
+\end{minipage}
+&
+\begin{minipage}{8cm}
+\begin{enumerate}[]
+\item [6.] Customer Segments
+\item [7.] Customer Relationships
+\item [8.] Cost Structure
+\item [9.] Revenue Stream
+\end{enumerate}
+\end{minipage}
+\\
+\end{tabular}
+\end{table}
 
 
+\begin{landscape}
+\begin{figure}
+\centering
+  \begin{tikzpicture}[node distance=2mm,scale=1, every node/.style={scale=1}]
+  \begin{scope}[start chain]
+    \node[minimum height=10cm,   minimum width=4.4cm,  on chain, text width=4cm, draw, name=KP]  (0,0)                  
+    {\scriptsize \textbf{Key Partners:}\\ 
+We want partners like Valk Welding who are suppliers of robot welding systems with a broad network. For hardware, no specific supplier is intended.
+    }; 
+      \begin{scope}[start branch]
+	\node[minimum height=4cm,   minimum width=11.3cm,    on chain=going below, text width=9.5cm, draw, name=CoS,xshift=3.45cm] 
+	{\scriptsize\textbf{Cost Structure:}
+There are fixed costs in rental of premises, employees, etc. A big part of the cost structure is variable, it varies with the revenue. Like procurement of supplies which is coherent with sales. 
+	}; 
+	\node[minimum height=4cm,   minimum width=11.34cm,    on chain=going right, text width=9.5cm, draw, name=RS]  
+	{\scriptsize\textbf{Revenue Streams:}\\
+A revenue stream is generated through the sales channel to the various robot-developing companies, who end up providing the product to the end customers.
+We will develop our product for specific welding robots for a price, providing another potential revenue stream. 
+% Patenting the product will be also an important part to maintain revenue, as it will allow us to charge a significant sum of money from companies who wish to use our technology.
+	}; 
+      \end{scope}
+      
+      
+      \begin{scope}[start branch]
+	\node[minimum height=4.84cm, minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=KA,yshift=2.58cm]     
+	{\scriptsize\textbf{Key Activities:}\\
+Initially, the main activity will be development of concept, after which our focus will shift to manufacturing of the product. 
+The concept will be continuously improved to fit the market optimally.
+	};
+      \end{scope}
+      \node[minimum height=4.84cm, minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=KR,yshift=-2.58cm]              
+      {\scriptsize\textbf{Key Resources:}\\
+In the development phase we need start-up capital. Reliable suppliers is a must in order to have a reliable business. A robot welding company as partner is required. 
+      }; 
+      \node[minimum height=10cm,   minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=VP,yshift=2.58cm]                
+      {\scriptsize\textbf{Value Proposition:}\\
+We offer a flexible way to program welding robots. It provides quality welding, efficiency, easy setup and training, reduced need for quality controls and a significant reduction in labour hours.
+      };
+	\begin{scope}[start branch]
+	  \node[minimum height=4.84cm, minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=CR,yshift=2.58cm]              
+	  {\scriptsize\textbf{Customer Relationship:}\\
+We will have contact to our end users through feedback from customers. 
+	  }; 
+	\end{scope}
+      \node[minimum height=4.84cm, minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=Ch ,yshift=-2.58cm]              
+      {\scriptsize\textbf{Channels:}\\
+End users buy our product through welding robot companies/sellers. We will be participating in relevant conferences with partners. 
+A website will be provided with the technical information of product, videos, contact information, etc. 
+      };
+      \node[minimum height=10cm,   minimum width=4.4cm,  on chain=going right, text width=4cm, draw, name=CuS,yshift=2.58cm]               
+      {\scriptsize\textbf{Customer Segments:}\\
+Relevant customers are: Companies who are already in the field of robotic welding or companies who could be interested in buying the product to supplement their own products. 
+Primarily it will be customers who develop robots.  
+Our end users will be SME's who do welding with a small production run.
+      };
+    \end{scope}
+    
+
+  \end{tikzpicture}
+  \caption{Osterwalder Business Model}
+  \label{ost_business_model}
+\end{figure}
+\end{landscape}
