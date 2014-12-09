@@ -1,10 +1,15 @@
 \subsection{Software Implementation}
-Software is one of the essentials of the product, it is also one of the challenges for the business to exist. Since a business plan describes the fundamentals of the company and how it is going to make money, it is a critical section to describe the product, which will be done during this section. When there is a need of developing a software, the usual way would be to collect requirements from stakeholders. Currently the group is the only known stakeholder and therefore it is hard to create the usual procedure for the development. This would be a acquiring of requirements, create use cases, design a class diagram and keep it developed during the process. 
+Software is one of the essentials of the product, it is also one of the challenges for the business to exist. 
+The usual way of developing software is to collect requirements from stakeholders. 
+Currently the group is the only known stakeholder and therefore it is hard to create the usual procedure for the development. This would be acquiring requirements, creating use cases, design a class diagram and keep it developed during the process. 
 
-The development process is one of the key activities during the start up of the company. Therefore it is important to have focus of this specific process and making the choice of the right process. When in need of rapid development activities within the Scrum process would be attractive for the group, because it would implement the daily meeting which is used for sharing of problems and ideas for solving them. This requires an expert knowledge to become a useful process, which the group is eligible of.
+The development process is one of the key activities during the start up of the company. Therefore it is important to maintain focus on this specific process and making the choice of the right process. When in need of rapid development activities within the Scrum\footnote{Scrum is a process...} \nikolaj{make this footnote} process would be attractive for the group, because it would implement the daily meeting which is used for sharing of problems and ideas for solving them. This requires an expert knowledge to become a useful process, which the group is eligible of.
 
 \paragraph*{Structure of the Software System}~\\
-Figure \ref{ClassDiagram} shows the current state of the architecture of the software system. The header of each box is the name of a class. A class defines an area of responsibility in the program. Underneath is a box with names ending with "()", those are the name of methods, which are also known as the functionality. The arrows shows the direction of communication and the interfaces show the access to different hardware parts.
+Figure \ref{ClassDiagram} shows the current state of the architecture of the software system. The header of each box is the name of a class. A class defines an area of responsibility in the program. 
+Underneath the name of the class is a box with 
+% names ending with "()", those are 
+names of methods, which are also known as the functionality. The arrows show the direction of communication and the interfaces show the access to different hardware parts.
 
 \begin{figure}[h!]
 \centering
@@ -13,7 +18,7 @@ Figure \ref{ClassDiagram} shows the current state of the architecture of the sof
 \label{ClassDiagram}
 \end{figure}
 
-The system is not yet complete and will grow during the development process. The modifications are hard to predict at this very moment, but this displays the main functions of the system and what focus areas there are within the development. 
+The system is not yet complete and will grow during the development process. The modifications are hard to predict, but figure \ref{ClassDiagram} displays the main functions of the system and what focus areas there are within the development. 
 
 The system is going to consist of multiple hardware parts, these parts will require interfaces for communication. This communication is going to happen not only between hardware, but also internally between different parts of the software.
 In this section, these different interfaces will be described. 
@@ -23,17 +28,18 @@ Hardware, in the form of sensors, is a major part of the product. These will req
 
 \begin{itemize}
 
-\item Adapter pattern for the Laser Scanner output software
-\item Network Interface between Add-On and a potential robot
+\item Adapter pattern for the laser scanner output software
+\item Network interface between add-on and a potential robot
 
 \end{itemize}
 
-The camera and the laser scanner will most likely come from different manufacturers, therefore there is no guarantee for compatibility of the included software. This is where an adapter pattern becomes useful within the system.
+The camera and the laser scanner will most likely be supplied by a different manufacturers, therefore there is no guarantee for compatibility between the included software packages. This is where an adapter pattern becomes useful within the system.
 
 The network interface will have to fit any standards that exist for robotic interfaces. Additionally the interface is very dependant on the specific partner's software and their choice of robotic interfaces.
 \paragraph*{Software Interfaces}~\\
-Software interfaces are often used when it comes to the facade of a system. This helps making the objects unknown to other objects in the system. The purpose is to make a system with low coupling and high cohesion. Interfaces are also common to use when you have several objects or classes which need the same method, so to decrease repetitive programs, you should implement interfaces instead. It is hard to identify methods that should be reinvented within the current prototype class diagram, which is why this section will not cover them. That is why the class diagrams will be updated during the development process of the software. There are two different software interfaces used in the system:
-
+Software interfaces are often used when it comes to the facade of a system. This helps making the objects unknown to other objects in the system. The purpose is to make a system with low coupling and high cohesion. Interfaces are also common to use when you have several objects or classes which need the same method, so to avoid identical programs, you should implement interfaces instead. 
+It is hard to identify where changes will be made in the class diagram, which is why this section will not cover these. 
+That is why the class diagrams will be updated during the development process of the software. There are two different software interfaces used in the system:
 \begin{itemize}
 
 \item Facade pattern for the embedded camera
@@ -44,7 +50,7 @@ Software interfaces are often used when it comes to the facade of a system. This
 \paragraph*{User Interfaces}~\\
 The main issue when designing a user interface is to keep it user friendly, however, it is still important that the requirements set by the stakeholders are taken into careful consideration. During the design process these requirements should be updated frequently to avoid any misunderstandings.
 
-The add-on will come with a tablet which will be the platform for the user interface. Different functionalities are provided by this interface: 
+The add-on will come with a touch interface which will be the platform for the user interface. Different functionalities are provided by this interface: 
 
 \begin{itemize}
 
@@ -57,7 +63,7 @@ The add-on will come with a tablet which will be the platform for the user inter
 
 This enables the end user to modify the welding process in a few steps. Importance of user friendliness is immense, since the time spent on modifying the process has to be compared to the time the user could spend somewhere else.
 
-\subsubsection{Specific requirements}
+\subsubsection{Specific Requirements}
 Requirements are fundamental to specify the tasks to solve when creating a software system. Requirements can be divided into categories as seen here:
 
 \textbf{Functional Requirements:}
@@ -72,7 +78,7 @@ Requirements are fundamental to specify the tasks to solve when creating a softw
 
 \end{itemize}
 
-\textbf{Non-functional Requirements:}
+\textbf{Non-Functional Requirements:}
 
 \begin{itemize}
 
@@ -81,7 +87,7 @@ Requirements are fundamental to specify the tasks to solve when creating a softw
 
 \end{itemize}
 
-\paragraph*{Functions}~\\
+\paragraph*{Functions Within the System}~\\
 
 The system can be divided into three major functions, which handles the process of detecting the place to weld, associate x, y and z coordinates and convert them into the movement program of a robot.
 
@@ -95,7 +101,7 @@ These actions can be divided into the following functions:
 
 \end{itemize}
 
-\subparagraph*{System attributes}~\\
+\subparagraph*{System Attributes}~\\
 System attributes describes the qualities of a system in short terms. Primary qualities of the system is going to be:
 
 \begin{itemize}
@@ -124,7 +130,7 @@ Real time is not requested in our system, since a worker handles the robot and l
 
 In general this mean that the end customers will not have to implement an expensive network between our add-on and the robot. 
 
-\subsubsection{Life cycle}
+\subsubsection{Life Cycle}
 
 When the product has been developed and released it is far from complete, this is the reason for maintenance and repeating the working process of optimization and development. If the product is not updated, competitors and new ideas on the market will quickly surpass our product. Therefore it is important to repeat the actions described in the life cycle below:
 
