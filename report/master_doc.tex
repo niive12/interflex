@@ -25,6 +25,31 @@
 \fancyfoot[LO,RE]{\thepage}
 
 %%%%% Content should go here %%%%%%%
+
+
+\begin{figure}
+\newcommand{\namesigdate}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[0pt]
+%    {\small \textit{Signature}}% \\[2\normalbaselineskip] \hrule %\\[0pt]
+    %{\small \textit{Date}}
+  \end{tabular}
+}
+\begin{changemargin}{-0cm}{-0cm}
+\centering
+\noindent \namesigdate[4.3cm]{Nikolaj Iversen} \hspace{1cm} \namesigdate[4.3cm]{Thomas S. Christensen} \hspace{1cm} \namesigdate[4.3cm]{David Micka} \\~\\~\\
+\centering
+\noindent \namesigdate[4.3cm]{Xabier Martinez} \hspace{1cm}  \namesigdate[4.3cm]{Kirstine Winding Nielsen} \hspace{1cm}   \namesigdate[4.3cm]{Simon Wulff Frederiksen}
+\hfill \namesigdate[4.3cm]{Casper Gellert Olsen} \hfill 
+\end{changemargin}
+\end{figure}
+
+\clearpage
+
+
+
+
+
 \include{./content/Introduction}
 \section{Product Description}\label{product_description}
 \input{./content/Expert_skills/short_description}
@@ -46,7 +71,7 @@
 \todo[inline, color=red!50]{Action and development plan section is incomplete}
 \input{./content/Businessplan/RiskAnalysis} % still missing
 \input{./content/Businessplan/budget}
-
+\clearpage
 \section{Collaboration}
 
 \input{./content/Collaboration/CollaborationIntroduction}
@@ -58,13 +83,14 @@
 \input{./content/Collaboration/GPITGAIT}
 \input{./content/Collaboration/StudentToStudentCollaboration}
 \input{./content/Collaboration/Collaborameter}
+\clearpage
+\input{./content/Innovation_and_business/pictures}
 \input{./content/Collaboration/conclusion}
 \clearpage
-\section{Innovation methods}
-\input{./content/Innovation_and_business/pictures}
+% \section{Innovation methods}
 
-\include{./content/Innovation_and_business/brainstorm}
-\include{./content/Innovation_and_business/osterwalder}
+% \include{./content/Innovation_and_business/brainstorm}
+% \include{./content/Innovation_and_business/osterwalder}
 
 \clearpage
 \include{./content/Appendix/references}
